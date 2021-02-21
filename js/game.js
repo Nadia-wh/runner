@@ -62,22 +62,22 @@ class Game{
 
         
 
-        if(keyDown('D') || keyDown('d') && dead == false && touches.length > 0){
+        if(keyDown('D') || keyDown('d') && dead == false){
             player.x = player.x + 20;
             facingRight = true;
             facingLeft = false;
 
             player.changeAnimation("w",playerWalk);
 
-            touches=[];
+            
         }
-        else if(keyDown('A') || keyDown('a') && dead == false && touches.length > 0){
+        else if(keyDown('A') || keyDown('a') && dead == false ){
             player.x = player.x - 20;
             facingLeft = true;
             facingRight = false;
 
             player.changeAnimation("w",playerWalk);
-            touches=[];
+            
         }
         else{
             player.changeAnimation("i",playerIdle);
